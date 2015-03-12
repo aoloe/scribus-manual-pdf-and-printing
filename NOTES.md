@@ -1,6 +1,6 @@
 # Notes
 
-## utnik on on scribus-users-de/forum
+## utnik on scribus-users-de/forum
 
 transparenzen reduzieren kann scribus bisher nicht, also musst du diese entweder durch workarounds (z.b. vorgängiges flachrechnen in gimp) vermeiden, mit höheren .pdf-versionen als 1.3 leben oder die transparenzen nachträglich mit werkzeugen wie 'acrobat' reduzieren – ein gratis-tool kenne ich dafür nicht.
 
