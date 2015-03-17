@@ -82,3 +82,16 @@ File size:      464073 bytes
 Optimized:      yes
 PDF version:    1.4
 ~~~
+
+jluc says on the mailing list:
+
+Here are a few links to pages illustrating the boxes with images.
+
+- http://www.plda.net/en/Examples/UserGuide/PageBoxes.aspx
+
+- https://acrobatusers.com/tutorials/finding-page-boundaries
+
+- http://stackoverflow.com/questions/13236370/pdf-bleed-detection
+
+(I just did an image search on google for "PDF boxes" and picked the good
+images)
