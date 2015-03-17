@@ -39,3 +39,46 @@ being forced to produce a PDF, display on your monitor and then print it, might 
 
 and for the lazy guys among us, i personally, would prefer a "print command" that creates a PDF in the background and then launches your preferred PDF viewer and print it... but since on some systems the print function does indeed work as intended, the team sticks with the current situation.
 and lets us explain all this to the many people that are deceived by scribus not being able to print...
+
+## nermander on the mailing list
+
+Bleed is tha area outside the page edge where Scribus will crop content,
+however the PDF size may be larger to accomodate crop marks etc (they have
+to be outside the bleed area to prevent them from being covered by bleed
+content).
+
+Good PDF tools will be aware of the different PDF boxes (trim, bleed, media
+etc) and a PDF "larger than necessary" won't be a problem. Unfortunately
+most free PDF tools don't handle the PDF boxes well.
+
+## william bader on the mailing list
+
+(not free content)
+
+An EPS has only a single BoundingBox but a PDF contains a MediaBox, CropBox, BleedBox, TrimBox and ArtBox.
+For a description, see http://www.prepressure.com/pdf/basics/page-boxes
+
+For an advertisement, ArtBox is the content of the ad; TrimBox is the size that an application like Scribus should use to place the ad; BleedBox is the size that applications like Scribus should clip to; CropBox is the size for proofing the ad for viewers but is not supposed to be used by applications like Scribus; MediaBox is for complete pages including items that will be physically trimmed from the final product like crop marks, registration marks, slugs, etc.
+
+Some viewers like "gv" have an option to let you override the displayed area.
+The poppler package has the capability also, for example, pdftops crops to the CropBox by default but has a -nocrop option to use the MediaBox instead.
+
+On Linux, you can check the values with pdfinfo in the poppler package with the -box option.
+
+~~~
+$ pdfinfo -box 20185846-crop.pdf 
+Producer:       Acrobat Distiller 3.0 for Power Macintosh
+CreationDate:   Thu Dec 11 16:40:22 2003
+ModDate:        Fri Dec 12 13:09:10 2003
+...
+Page size:      415.79 x 1009.81 pts
+Page rot:       0
+MediaBox:           0.00     0.00   432.00  1152.00
+CropBox:            7.89    16.19   423.68  1026.00
+BleedBox:           7.89    16.19   423.68  1026.00
+TrimBox:            7.89    16.19   423.68  1026.00
+ArtBox:             7.89    16.19   423.68  1026.00
+File size:      464073 bytes
+Optimized:      yes
+PDF version:    1.4
+~~~
