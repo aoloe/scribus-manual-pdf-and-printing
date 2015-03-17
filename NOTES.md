@@ -53,7 +53,7 @@ most free PDF tools don't handle the PDF boxes well.
 
 ## william bader on the mailing list
 
-(not free content)
+(not free content, but posted by jluc on the wiki as cc-by-sa and the original author has been notified about it)
 
 An EPS has only a single BoundingBox but a PDF contains a MediaBox, CropBox, BleedBox, TrimBox and ArtBox.
 For a description, see http://www.prepressure.com/pdf/basics/page-boxes
