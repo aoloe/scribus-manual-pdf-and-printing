@@ -88,10 +88,10 @@ jluc says on the mailing list:
 Here are a few links to pages illustrating the boxes with images.
 
 - http://www.plda.net/en/Examples/UserGuide/PageBoxes.aspx
-
 - https://acrobatusers.com/tutorials/finding-page-boundaries
-
 - http://stackoverflow.com/questions/13236370/pdf-bleed-detection
 
 (I just did an image search on google for "PDF boxes" and picked the good
 images)
+
+The relevant Adobe PDF specification:   <http://www.adobe.com/content/dam/Adobe/en/devnet/acrobat/pdfs/PDF32000_2008.pdf>, section 14.11.2.2 "Display of Page Boundaries" on page 630.
