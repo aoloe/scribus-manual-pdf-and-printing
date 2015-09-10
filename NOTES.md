@@ -95,3 +95,22 @@ Here are a few links to pages illustrating the boxes with images.
 images)
 
 The relevant Adobe PDF specification:   <http://www.adobe.com/content/dam/Adobe/en/devnet/acrobat/pdfs/PDF32000_2008.pdf>, section 14.11.2.2 "Display of Page Boundaries" on page 630.
+
+## Pdf and size
+
+utnik says in the forum:
+
+Images can be part of the problem:  
+afaik scribus doesn't crop images to the visible part when they overlap the frame.  
+if your layout contains large images with edges overlapping the frame, you should crop them with an image processor like 'gimp'…
+
+
+Nermander say in the forum:
+
+Fonts and placement of text are the most common ploblems.
+
+When it comes to fonts, a unicode Open Type font may be as big as 10-15 MB. Embed several fonts and your PDF becomes very big.
+
+Scribus usually places each glyph individually. This means Scribus will "relocate the cursor" for each glyph in the text.
+
+Most other programs just "place the cursor" at the start of the line and then put a string of glyphs starting at that point. 
