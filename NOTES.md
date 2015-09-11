@@ -114,3 +114,12 @@ When it comes to fonts, a unicode Open Type font may be as big as 10-15 MB. Embe
 Scribus usually places each glyph individually. This means Scribus will "relocate the cursor" for each glyph in the text.
 
 Most other programs just "place the cursor" at the start of the line and then put a string of glyphs starting at that point. 
+
+# imposition
+
+j'essaye d'être bref pour être plus clair :-)
+
+- ce n'est pas conseillé d'imprimer directement depuis scribus. c'est mieux de créer un pdf et de l'impimer par la suite.
+- adobe reader a une fonction livret: c'est la meilleure solution pour imprimer un livret sur une imprimante de bureau. il n'y a rien de spécial à faire dans scribus. c'est possible que d'autres lecteurs de pdf aient cette fonctionalité.
+- c'est aussi possible de définir une suite de pages dans scribus et ensuite utiliser pdfnup pour créer un livret. ici https://github.com/CoderDojoZH/resources/tree/master/cards#producing-the-a4-pdf-and-its-png-preview tu peuv voir comment j'ai placé 4 pages créées dans scribus sur une feuille A4 (la suite et les commandes pour un livret sont légerement différentes mais pas trop :-)
+- ce n'est pas une bonne idée d'avoir du texte qui passe à travers le pli: il y a peu de chances que ça soit lisible à l'impression. sur des imprimantes de bureau j'éviterais aussi tout fond perdu (et si c'est un imprimeur qui va imprimer ton PDF ça sera sa tâche de trier les pages et de faire les découpages)
