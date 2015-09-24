@@ -123,3 +123,30 @@ j'essaye d'être bref pour être plus clair :-)
 - adobe reader a une fonction livret: c'est la meilleure solution pour imprimer un livret sur une imprimante de bureau. il n'y a rien de spécial à faire dans scribus. c'est possible que d'autres lecteurs de pdf aient cette fonctionalité.
 - c'est aussi possible de définir une suite de pages dans scribus et ensuite utiliser pdfnup pour créer un livret. ici https://github.com/CoderDojoZH/resources/tree/master/cards#producing-the-a4-pdf-and-its-png-preview tu peuv voir comment j'ai placé 4 pages créées dans scribus sur une feuille A4 (la suite et les commandes pour un livret sont légerement différentes mais pas trop :-)
 - ce n'est pas une bonne idée d'avoir du texte qui passe à travers le pli: il y a peu de chances que ça soit lisible à l'impression. sur des imprimantes de bureau j'éviterais aussi tout fond perdu (et si c'est un imprimeur qui va imprimer ton PDF ça sera sa tâche de trier les pages et de faire les découpages)
+
+
+## kaspar and jghali in the bug tracker
+
+I have a problem with "total ink density" parameter Scribus 1.4.5 generated PDF file.
+
+### Question
+Case A:  
+I use Scribus for making a cover for a book. Design is tiff file made with Gimp. I converted RGB file to CMYK file. The result of the command "identify -verbose cover-CMYK.tiff" is: "Total ink density: 270%" and "Profiles: Profile-icc: 1829087 bytes SC paper (ECI)". That is ok. If I add this file to Scribus and export to PDF/X-1a file, the result of "identify -verbose cover.pdf" is: "Total ink density: 400%" and "Profiles:" rows is not existing.
+
+Case B:  
+I use Scribus for making the content of the book in grayscale. If I export this to PDF1.3 file the result of "identify -verbose book.pdf" is: "Total ink density: 400%" but should be "Total ink density: 270%".
+
+The problem seems to be Scribus, not ICC profile. When I use ImageMagick (convert cover-RGB.tiff +profile icm -profile /usr/share/color/icc/AdobeRGB1998.icc -profile /usr/share/color/icc/SC_paper_eci.icc cover-CMYK.pdf) to make a PDF file, I get the result: "Total ink density: 296%".
+
+### Answer
+
+There is no issue. The issue comes from an ImageMagick limitation vs prepress requirements. The 400% ink limit found by ImageMagick identify comes from PDF marks located outside of bleed zones, noticeably registration marks. Those marks use a special colors called registration color which by definition and for technical reason use 100% for each ink. In production, those 400% are not a problem because those marks are thin and outside the page.
+
+PDF has a concept of page zones. The most important are the TrimBox and BleedBox which defines zones where elements which should be found in the final product appear. Those boxes are all defined by in PDF exported by Scribus. The area located between TrimBox and BleedBox is cut during the production process (with a small margin of error). The various marks are located outside these zones. ImageMagick "identify" scan also those elements while they could be avoided.
+
+Fyi, Acrobat shows that the max ink coverage inside bleed box is 270% in both cases A and B.
+
+	Additional info: professional preflight checkers such as Pitstop Pro consider elements position when checking for ink coverage. They are able to detect in which PDF page zone each element is located and are able to skip elements which are outside a specific page zone.
+
+Kriks:	Just a note: you can add "-define pdf:use-trimbox=true" to your identify command (before the filename), but it still doesn't gives the 270% (my result is 295.686%).  
+I don't know where the difference comes from. 
