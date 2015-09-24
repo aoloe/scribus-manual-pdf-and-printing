@@ -125,7 +125,9 @@ j'essaye d'être bref pour être plus clair :-)
 - ce n'est pas une bonne idée d'avoir du texte qui passe à travers le pli: il y a peu de chances que ça soit lisible à l'impression. sur des imprimantes de bureau j'éviterais aussi tout fond perdu (et si c'est un imprimeur qui va imprimer ton PDF ça sera sa tâche de trier les pages et de faire les découpages)
 
 
-## kaspar and jghali in the bug tracker
+## ink coverage
+
+kaspar and jghali in the bug tracker
 
 I have a problem with "total ink density" parameter Scribus 1.4.5 generated PDF file.
 
