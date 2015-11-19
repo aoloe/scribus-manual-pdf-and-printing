@@ -24,6 +24,15 @@ Zu diesen Dateiformaten gehören u.a. EPS, jpeg, GIF, BMP und die PDF-Versionen 
 
 EPS/PostScript unterstützt keine Transparenz (und wird auch nie welche unterstützen, da Adobe seit mehr als 10 Jahren EPS/PostScript nicht weiter entwickelt) ausser ein Illustrator-EPS, weil in dieser Datei 2 Versionen gespeichert werden, öffnet man das Illu.-EPS nicht in Illu. hat man verflachte Transparenz, öffnet man es in Illustrator wird die Live-Transparenz dargestellt!
 
+
+## julius on scribus-user.de/forum3
+
+mit Ghostscript erzeugt folgender Befehl eine PDF1.3-Datei:
+
+    gs -o output.pdf -sDEVICE=pdfwrite -dCompatibilityLevel=1.3 Test.pdf
+
+Die Transparenzen werden reduziert, Hyperlinks bleiben bestehen, dummerweise rastert Ghostscript aber den Text (vielleicht gibt’s dafür ja eine Lösung), grrr... Meinem Verständnis nach würde es ja reichen, wenn Ghostscript alle Objekte, die Transparenzen verwenden oder mit solchen Überschneidungen besitzen, rastert.
+
 ## ale on scribus/forum
 
 there are reasons, both practical and theoretical, that have lead me to push for the opposite way of doing: scribus should not be able to *directly* print at all!
