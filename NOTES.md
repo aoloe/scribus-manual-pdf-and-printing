@@ -169,4 +169,8 @@ does exactly what it says: with most of today fonts a real subset will be produc
 Type3 subset option being now mostly used by old Postscript Type 1 fonts. Same the outline
 mode will do what it says, the font will be really vectorized in order to respond to the
 need of print shops which do not want to see any trace of font, even Type 3, in the files
-they receive." (jean, ML, 14.1.2016)
+they receive. [...]
+True vectorization can be achieved with the "Outline all fonts" mode. But that will affect
+all fonts. [...]
+In "Dont Embed" mode Fonts are not embedded at all in any kind of form. So that's a mode which you should use
+only at your own risk. Mostly suited for simple forms. I would not mind completely removing that mode btw." (jean, ML, 14.1.2016)
