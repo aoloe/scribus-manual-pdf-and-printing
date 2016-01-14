@@ -161,3 +161,12 @@ Fyi, Acrobat shows that the max ink coverage inside bleed box is 270% in both ca
 
 Kriks:	Just a note: you can add "-define pdf:use-trimbox=true" to your identify command (before the filename), but it still doesn't gives the 270% (my result is 295.686%).  
 I don't know where the difference comes from. 
+
+## Fonts emebdding, subsetting, and outlining
+
+"in font subsetting done by Andreas, the subset options now
+does exactly what it says: with most of today fonts a real subset will be produced, the
+Type3 subset option being now mostly used by old Postscript Type 1 fonts. Same the outline
+mode will do what it says, the font will be really vectorized in order to respond to the
+need of print shops which do not want to see any trace of font, even Type 3, in the files
+they receive." (jean, ML, 14.1.2016)
