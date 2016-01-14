@@ -164,6 +164,8 @@ I don't know where the difference comes from.
 
 ## Fonts emebdding, subsetting, and outlining
 
+Starting with 1.5.1:
+
 "in font subsetting done by Andreas, the subset options now
 does exactly what it says: with most of today fonts a real subset will be produced, the
 Type3 subset option being now mostly used by old Postscript Type 1 fonts. Same the outline
