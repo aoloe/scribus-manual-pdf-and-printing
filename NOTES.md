@@ -176,3 +176,16 @@ True vectorization can be achieved with the "Outline all fonts" mode. But that w
 all fonts. [...]
 In "Dont Embed" mode Fonts are not embedded at all in any kind of form. So that's a mode which you should use
 only at your own risk. Mostly suited for simple forms. I would not mind completely removing that mode btw." (jean, ML, 14.1.2016)
+
+## All letter "l"s bold in *.pdf file
+
+Nermander in the forum on 28.1.2016:
+
+"The problem is when the content (in this case the glyph) is sized och positioned with a higher resolution than the output device (in this case the monitor).
+
+Just rounding the numbers does not work, that's why fonts include "hinting" information. That information tells how the numbers should be rounded so that the glyph is not distorted to much.
+
+When a font is converted to outlines, it is no longer a font, thus there is no hinting information available. So what you see is "rounding errors".
+
+<https://www.typotheque.com/articles/hinting>
+<http://alistapart.com/column/font-hinting-and-the-future-of-responsive-typography>" 
