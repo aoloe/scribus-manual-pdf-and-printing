@@ -189,3 +189,9 @@ When a font is converted to outlines, it is no longer a font, thus there is no h
 
 <https://www.typotheque.com/articles/hinting>
 <http://alistapart.com/column/font-hinting-and-the-future-of-responsive-typography>" 
+
+# Why are the PDFs created by OS X much smaller?
+
+you mostly can sefely distribute the "os x" pdfs... it's probably the better choice if your goal is to get the people to view the pdf on their monitor or print on their home printer.
+
+for the pdf you're sending to the print shop, you'd probably want to use the scribus own pdf engine: it gives you a finer control and more options.
