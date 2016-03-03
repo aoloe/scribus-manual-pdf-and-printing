@@ -177,6 +177,8 @@ all fonts. [...]
 In "Dont Embed" mode Fonts are not embedded at all in any kind of form. So that's a mode which you should use
 only at your own risk. Mostly suited for simple forms. I would not mind completely removing that mode btw." (jean, ML, 14.1.2016)
 
+The meaning of "outline" is different in 1.5.0 and 1.5.1. In 1.5.0, "outline" was really meaning "subset as a Type 3 font". 1.5.1 can now export true CFF and TrueType subsets so using Type 3 subsets is not desirable anymore. The uses of Type 3 subsets also did not provide what some users wanted ie true conversion of text to paths. So in 1.5.1, "outline" means just that, full conversion of text to paths without any use of font in the final PDF. This way of exporting text respond to use case where you do not want any font to be present in the final PDF while being able to print reliably. Hence the different behavior in 1.5.1.  (jean, bug tracker, 2016-03-03 02:08)
+
 ## All letter "l"s bold in *.pdf file
 
 Nermander in the forum on 28.1.2016:
