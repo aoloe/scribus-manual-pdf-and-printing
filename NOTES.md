@@ -197,3 +197,21 @@ When a font is converted to outlines, it is no longer a font, thus there is no h
 you mostly can sefely distribute the "os x" pdfs... it's probably the better choice if your goal is to get the people to view the pdf on their monitor or print on their home printer.
 
 for the pdf you're sending to the print shop, you'd probably want to use the scribus own pdf engine: it gives you a finer control and more options.
+
+## ale on irc
+
+Why can Scribus create good PDFs but it does not reliably print?
+
+PDF is a clear defined target that scribus supports correctly (for the things it supports).
+Printing depends on your specific printer, on the driver you've installed, on the printing subsystem (postscript, hp, ...)...
+
+This beeing said, printing should work correctly on windows.  
+On mac and linux scribus can be configured to work correctly. And, then, it will work as you would expect.
+
+but, if it does not work correctly with the default settings, the effort you'll need to get it to work is way too big and you'd better create
+a pdf and use a pdf viewer to print your pdf.
+
+- btw, printing a normal b/w a4 document should work correctly.
+- landscape is hard
+- colors might be hard.
+
