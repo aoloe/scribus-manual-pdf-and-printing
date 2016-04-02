@@ -38,6 +38,12 @@ Wir müssen uns aber noch darauf einigen, daß mit Transparenz diese in Prozent 
 Keine Hintergrundfarbe bei einem Textrahmen z.B., oder Transparenz bei einem png.  
 Aber legt mal über ein Bild einen weißen Rahmen mit 60% Transparenz (40% Deckkraft), um das Bild an der Stelle heller zu machen - der wird im pdf komplett weiß. Schlagschatten arbeiten auch mit prozentualen Transparenzen und tauchen deshalb im pdf gar nicht auf. (Alle Angaben für pdf, die keine Transparenz können.)
 
+tipper: Doch! Die von Scribus 1.4.5 erzeugte 1.4-PDF-Datei enthält echte Transparenzen. Das ist ein Feature von PDF 1.4. Für den PDF-Proof hat Ceweprint in der eigenen Engine die Transparenzen reduziert und mir zur Kontrolle ein PDF 1.3 geschickt (das keine echten Transparenzen mehr enthalten kann).  
+Das war das Zeichen dafür, daß sie die echten Transparenzen aus meiner Datei verstanden haben. Weil ich das auf der Ceweprint-Webseite auch gelesen hatte ("keine Transparenzen"), hab ich angerufen und den Tip mit dem Softproof bekommen. Genauer: ich sollte die Bestellung abschicken mit bestelltem Softproof, eine halbe Stunde nach Datenübermittlung anrufen und zum bestehenden Auftrag mitteilen, daß die Transparenzen ernst gemeint sind. Hab ich dann auch so gemacht, hat geklappt. 
+[...]  
+Eine PDF/X-3 ist technisch eine PDF 1.3 mit zusätzlichen Anforderungen* und kann keine Transparenzen enthalten (per Definition nicht, kein Manko von Scribus).  
+Eine PDF/X-4 ist technisch mindestens eine PDF 1.4 (oder 1.6) mit zusätzlichen Anforderungen* und kann echte Transparenzen enthalten
+
 
 ## julius on scribus-user.de/forum
 
