@@ -31,7 +31,12 @@ http://www.scribus-user.de/forum/viewtopic.php?f=5&t=319&p=2193
 - carlos:  Ich habe jetzt einen Testflyer mit Transparenzen bei http://www.online-druck.biz in Auftrag gegeben, denn die bieten als einzige Online-Druckerei PDF/X-4 an. Und siehe da, der Druck war perfekt, der Preis sowieso.
 - tipper: für Ceweprint kann ich noch melden: Transparenzen wurden bei mir (2015) ordentlich verarbeitet aus einem PDF 1.4 aus Scribus 1.4.5. Ich hatte einen PDF-Proof bestellt, der war nur noch PDF 1.3 und die Transparenzen waren ordentlich reduziert, sah gut aus.
 
+laser antowrtet darauf: Das würde mich auch interessieren - denn in dem von Scribus erzeugten pdf 1.4 ist ja keine Transparenz mehr vorhanden.  
+Cewe schreibt auch ausdrücklich, daß keine Transparenzen erlaubt sind. (Ich laß da auch öfter drucken.)
 
+Wir müssen uns aber noch darauf einigen, daß mit Transparenz diese in Prozent gemeint ist. 100% Transparenz bereitet keine Probleme!  
+Keine Hintergrundfarbe bei einem Textrahmen z.B., oder Transparenz bei einem png.  
+Aber legt mal über ein Bild einen weißen Rahmen mit 60% Transparenz (40% Deckkraft), um das Bild an der Stelle heller zu machen - der wird im pdf komplett weiß. Schlagschatten arbeiten auch mit prozentualen Transparenzen und tauchen deshalb im pdf gar nicht auf. (Alle Angaben für pdf, die keine Transparenz können.)
 
 
 ## julius on scribus-user.de/forum
