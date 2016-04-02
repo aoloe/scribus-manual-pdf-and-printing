@@ -24,8 +24,17 @@ Zu diesen Dateiformaten gehören u.a. EPS, jpeg, GIF, BMP und die PDF-Versionen 
 
 EPS/PostScript unterstützt keine Transparenz (und wird auch nie welche unterstützen, da Adobe seit mehr als 10 Jahren EPS/PostScript nicht weiter entwickelt) ausser ein Illustrator-EPS, weil in dieser Datei 2 Versionen gespeichert werden, öffnet man das Illu.-EPS nicht in Illu. hat man verflachte Transparenz, öffnet man es in Illustrator wird die Live-Transparenz dargestellt!
 
+## erfahrungsberichte über transparenzen in pdf aus scribus-user.de/forum
 
-## julius on scribus-user.de/forum3
+http://www.scribus-user.de/forum/viewtopic.php?f=5&t=319&p=2193
+
+- carlos:  Ich habe jetzt einen Testflyer mit Transparenzen bei http://www.online-druck.biz in Auftrag gegeben, denn die bieten als einzige Online-Druckerei PDF/X-4 an. Und siehe da, der Druck war perfekt, der Preis sowieso.
+- tipper: für Ceweprint kann ich noch melden: Transparenzen wurden bei mir (2015) ordentlich verarbeitet aus einem PDF 1.4 aus Scribus 1.4.5. Ich hatte einen PDF-Proof bestellt, der war nur noch PDF 1.3 und die Transparenzen waren ordentlich reduziert, sah gut aus.
+
+
+
+
+## julius on scribus-user.de/forum
 
 mit Ghostscript erzeugt folgender Befehl eine PDF1.3-Datei:
 
