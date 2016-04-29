@@ -235,3 +235,6 @@ a pdf and use a pdf viewer to print your pdf.
 - landscape is hard
 - colors might be hard.
 
+## Pdfs and fonts
+
+jean says: honnêtement, je ne sais combien de fois j'ai déja mentionné que les polices OTF ne peuvent être incorporées dans les fichiers PDF <= 1.5. Elles sont subset: dans ce cas les polices OTF sont incorporées sous forme de jeux partiels en tant que police PostScript CFF
