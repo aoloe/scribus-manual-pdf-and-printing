@@ -243,3 +243,7 @@ jean says: honnêtement, je ne sais combien de fois j'ai déja mentionné que le
 ## ll letter "l"s bold in pdf file
 
 Dave Barber in the forums: Best solution I have found is open Adobe Reader - Edit - Preference - select page display - uncheck Enhance Thin Line.
+
+mnawij in the forums: It happens with Adobe Illustrator and InDesign outlined fonts as well as CorelDraw fonts converted to curves.  I believe that it is a problem with "hinting" after the font is converted to a vector object.  As long as it prints to a postscript printer and looks correct there should be no problem.
+
+Since 1.5.2 it should be not so much of a problem anymore, since Scribus normally converts the font to a Type 1 one, instead of a real outlining (except when asked to do so).
