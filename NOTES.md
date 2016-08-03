@@ -238,3 +238,8 @@ a pdf and use a pdf viewer to print your pdf.
 ## Pdfs and fonts
 
 jean says: honnêtement, je ne sais combien de fois j'ai déja mentionné que les polices OTF ne peuvent être incorporées dans les fichiers PDF <= 1.5. Elles sont subset: dans ce cas les polices OTF sont incorporées sous forme de jeux partiels en tant que police PostScript CFF
+
+
+## ll letter "l"s bold in pdf file
+
+Dave Barber in the forums: Best solution I have found is open Adobe Reader - Edit - Preference - select page display - uncheck Enhance Thin Line.
