@@ -247,3 +247,14 @@ Dave Barber in the forums: Best solution I have found is open Adobe Reader - Edi
 mnawij in the forums: It happens with Adobe Illustrator and InDesign outlined fonts as well as CorelDraw fonts converted to curves.  I believe that it is a problem with "hinting" after the font is converted to a vector object.  As long as it prints to a postscript printer and looks correct there should be no problem.
 
 Since 1.5.2 it should be not so much of a problem anymore, since Scribus normally converts the font to a Type 1 one, instead of a real outlining (except when asked to do so).
+
+## color management for beginners
+
+in the bug tracker jean [says](https://bugs.scribus.net/view.php?id=13069#c39808):
+
+When exporting to print PDF, I recommend to users who are not color management aware to not enable any of the "use profile" options in PDF export dialog. However color management should be enabled in the color management options of document setup. In those options I recommend to enable the black point compensation. As a generic CMYK profile, the ISOCoated v2 300 (bas) gives god results, it can be downloaded from here:
+http://colormanagement.org/de/isoprofile2009.html#ISOcoated_v2_300_bas [^]
+
+The "use profile" options should be enabled when working in a color managed workflow. In the case of digital presses there are also benefits in doing so. Two cases here:
+- press/rip are configured so as to simulate a traditional press: leaving images as RGB will avoid a CMYK -> CMYK conversion, better to avoid that when possible as any further processing might affect image quality
+- press/rip are configured to use press full gamut: digital presses can indeed often reproduce a wider range of colors than traditional presses. In such condition, unless the press profile is at disposal, preconverting RGB image to CMYK will produce suboptimal results. Letting the RIP do so will produce more colorful results. 
