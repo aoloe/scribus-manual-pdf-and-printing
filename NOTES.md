@@ -258,3 +258,7 @@ http://colormanagement.org/de/isoprofile2009.html#ISOcoated_v2_300_bas [^]
 The "use profile" options should be enabled when working in a color managed workflow. In the case of digital presses there are also benefits in doing so. Two cases here:
 - press/rip are configured so as to simulate a traditional press: leaving images as RGB will avoid a CMYK -> CMYK conversion, better to avoid that when possible as any further processing might affect image quality
 - press/rip are configured to use press full gamut: digital presses can indeed often reproduce a wider range of colors than traditional presses. In such condition, unless the press profile is at disposal, preconverting RGB image to CMYK will produce suboptimal results. Letting the RIP do so will produce more colorful results. 
+
+## avox on irc on fonts embedding
+
+9.2016: Scribus creates Type3 fonts for embedding which look heavier than properly subsetted or embedded fonts.
