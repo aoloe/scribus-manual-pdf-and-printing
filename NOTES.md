@@ -69,7 +69,9 @@ being forced to produce a PDF, display on your monitor and then print it, might 
 and for the lazy guys among us, i personally, would prefer a "print command" that creates a PDF in the background and then launches your preferred PDF viewer and print it... but since on some systems the print function does indeed work as intended, the team sticks with the current situation.
 and lets us explain all this to the many people that are deceived by scribus not being able to print...
 
-## nermander on the mailing list
+## page and paper size
+
+### nermander on the mailing list
 
 Bleed is tha area outside the page edge where Scribus will crop content,
 however the PDF size may be larger to accomodate crop marks etc (they have
@@ -80,7 +82,7 @@ Good PDF tools will be aware of the different PDF boxes (trim, bleed, media
 etc) and a PDF "larger than necessary" won't be a problem. Unfortunately
 most free PDF tools don't handle the PDF boxes well.
 
-## william bader on the mailing list
+### william bader on the mailing list
 
 (not free content, but posted by jluc on the wiki as cc-by-sa and the original author has been notified about it)
 
@@ -125,7 +127,28 @@ images)
 
 The relevant Adobe PDF specification:   <http://www.adobe.com/content/dam/Adobe/en/devnet/acrobat/pdfs/PDF32000_2008.pdf>, section 14.11.2.2 "Display of Page Boundaries" on page 630.
 
-## Pdf and size
+### Getting the right page size according to the printer's specification
+
+http://forums.scribus.net/index.php/topic,2243.msg10260.htm
+
+TSRAlex asks: The print-company wants to have the PDF in a size of 89x59mm (see here their example here: http://www.saxoprint.de/Librarys/global/saxoprint/docs/templates/de/pdf/85x55mm_landscape_2s.pdf) and I made - for my understanding  :-\  - everything right for, but the result is a size of 91x61mm!  
+
+"Der Sicherheitsbereich von 3 mm wird mitgedruckt. Das Endformat Ihrer Visitenkarte beträgt 85 x 55 mm - mit Randanschnitt (welcher weggeschnitten wird) sollte die Datei 89 x 59 mm groß sein. Alle Schriften/Logos etc. sollten sich innerhalb des Bereiches 79 x 49 mm befinden um bei Ausreizen der Toleranzen nicht in den Beschnitt zu gelangen."
+
+utnik answers: the following settings will lead to your desired .pdf file:
+
+- document size: 85×55 mm
+- bleeds: 2 mm
+- margins: 3 mm (just to keep your content within the safe zone of 79×49 mm)
+
+utnik says:
+
+here’s my assumption: if you change the document size after its creation, you have to manually apply the change to the existing page(s) and master pages (if you want to apply the change to all existing and future pages).  
+go to `file > document setup` again, make sure that the settings are correct and under `apply settings to:` check ` all document pages` and `all master pages`.
+
+Nermander explains: "Individual pages in a document can have completely different sizes, that is why a change to the document setup does not automatically change the size of all pages. You need to explicitly tell Scribus that you want the change to affect pages that have already been created."
+
+## Pdf and file size
 
 utnik says in the forum:
 
