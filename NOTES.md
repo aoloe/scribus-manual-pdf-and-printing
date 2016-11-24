@@ -235,7 +235,7 @@ When a font is converted to outlines, it is no longer a font, thus there is no h
 <https://www.typotheque.com/articles/hinting>
 <http://alistapart.com/column/font-hinting-and-the-future-of-responsive-typography>" 
 
-# Why are the PDFs created by OS X much smaller?
+## Why are the PDFs created by OS X much smaller?
 
 you mostly can sefely distribute the "os x" pdfs... it's probably the better choice if your goal is to get the people to view the pdf on their monitor or print on their home printer.
 
@@ -285,3 +285,17 @@ The "use profile" options should be enabled when working in a color managed work
 ## avox on irc on fonts embedding
 
 9.2016: Scribus creates Type3 fonts for embedding which look heavier than properly subsetted or embedded fonts.
+
+## PDF Versions
+
+The most common PDF versions in use are 1.4, 1.5 and X/1-a.
+
+Depending on the device/printer you're targetting, you will choose a different version. Be aware, that the different versions also have different requirements and you have to fullfill some of them before being able to select that PDF version.
+
+You should also select the matching pdf version in the preflight verifier, so that you get meaningful warnings. and then squash all the warnings before producing the PDF.
+
+- If your targetting a print shop you should use the PDF version the print shop is expecting. If you don't know about such a requirement, you should target PDF 1.4 but avoid using transparencies and gradients.
+- If your targetting a home / office printer, you should use PDF 1.4. Transparencies and gradients are ok.
+- If you want to distribute the PDF on the web you should use PDF 1.4 and use the "size reduction script" to improve the internal structure of the PDF.
+
+Of course you have multiple targets, you can create multiple PDFs and use each one in the right context.
