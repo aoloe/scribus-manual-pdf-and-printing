@@ -299,3 +299,15 @@ You should also select the matching pdf version in the preflight verifier, so th
 - If you want to distribute the PDF on the web you should use PDF 1.4 and use the "size reduction script" to improve the internal structure of the PDF.
 
 Of course you have multiple targets, you can create multiple PDFs and use each one in the right context.
+
+
+## ale on facebook
+
+afaict in scribus there is no such thing as an export to cmyk...
+
+of course, this does not mean that you cannot export to cmyk.
+
+there are two ways of achieving this:
+
+- you can use only CMYK resources (pictures and colors!) and export with "screen/web" as a target. but this is risky
+- or you can add the correct CMYK profile (it should match the printer being used to give you the expected results) and then export with "printer" as a target. you should probably not check any other option.
