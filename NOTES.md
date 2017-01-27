@@ -311,3 +311,16 @@ there are two ways of achieving this:
 
 - you can use only CMYK resources (pictures and colors!) and export with "screen/web" as a target. but this is risky
 - or you can add the correct CMYK profile (it should match the printer being used to give you the expected results) and then export with "printer" as a target. you should probably not check any other option.
+
+## Exporting shows different/dull colours to those in scribus
+
+some (many) RGB colors aren't printable in a regular cmyk process.  
+either you work wit spot colors (expensive), or you live with the limitations of process colors. (utnik)
+
+the only way for a good approximation of the colors that will be printed, is to (correctly) enable the color management.
+
+using CMYK colors in scribus will only help, if your goal is to avoid using colors that are not printable at all (except if your picking the cmyk colors from a printed catalog or from the corporate identity guidelines).
+but on the monitor you will always see an RGB representation of the CMYK color. and without CMS that will or not reliably match what you will get from the printer.
+simply using CMYK colors probably will not really help if you want to avoid dull colors...
+
+and if you really want a good matching, you'll probably also need to calibrate the monitor...
