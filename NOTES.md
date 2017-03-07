@@ -324,3 +324,7 @@ but on the monitor you will always see an RGB representation of the CMYK color. 
 simply using CMYK colors probably will not really help if you want to avoid dull colors...
 
 and if you really want a good matching, you'll probably also need to calibrate the monitor...
+
+## hints from libregrahpics production
+
+http://libregraphicsproduction.com/workflow/print-preparation
