@@ -328,3 +328,93 @@ and if you really want a good matching, you'll probably also need to calibrate t
 ## hints from libregrahpics production
 
 http://libregraphicsproduction.com/workflow/print-preparation
+
+
+## doubts about scribus' outputs details
+
+```
+joesber> Hi! I'm using Scribus-svn (1.5.4), trying to create a table of content. But I can't select any destination frame or paragraph style on: file/document setup/table of contents
+<joesber> could it be a bug?
+<joesber> I had created before one item called "Index" on: File/document setup/document items se
+<joesber> And I tried also to add the atribute on a text frame, but it doens't show up on the list
+<a-l-e> the solution is (imo) not to use the table of contents...
+<joesber> Nice ;P
+<a-l-e> seriously, with the current way the toc is implemented you'd better type your titles and page numbers by hand.
+<joesber> I'm layouting a book with 150 tales and 150 autors, and it would be hard to type that amount of names
+* yvan has quit (Remote host closed the connection)
+* yvan (~yvan@2a01:e35:2ef8:a3d0:e494:e048:debb:708e) has joined
+<a-l-e> do the list outside of scribus...
+<a-l-e> you have to type the titles in the properties again...
+<a-l-e> a solution might be to open the pdf with libreoffice, create a toc in there and then import he toc in scribus... it might or not work correctly.
+* joesber_ (~joesber@20.red-79-151-78.dynamicip.rima-tde.net) has joined
+* estan (~astan@kde/developer/astan) has joined
+<estan> hi folks. when checking "Crop Marks" during PDF export, it seems they are always placed 1 mm in from the bleed (?). how do i control this?
+* yvan has quit (Remote host closed the connection)
+* yvan (~yvan@2a01:e35:2ef8:a3d0:e494:e048:debb:708e) has joined
+<estan> e.g. this shows both the bleed marks and crop marks in the exported PDF: https://imgur.com/a/KLQlx , how can i control the distance between them?
+<estan> i'd like it to be zero, i want my crop marks to be exactly at the bleed/non-bleed boundary.
+<a-l-e> estan, when exporting to pdf, in the pre-press tab, you can set an offset... is this what you are looking for?
+<estan> a-l-e: i tried that, but it seems to have no effect (it's also set to 0 by default).
+<estan> what i did was: create a document, give it a 3 mm bleed, export to pdf and check "Crop Marks". i had expected the crop marks to be at the bleed/non-bleed boundary (3 mm from the edge of the exported pdf). but it was an additional 2 mm in.
+<estan> (i said wrong when i said 1 mm, it's actually 2)
+<a-l-e> mmm... i would say that having the marks on the bleed will give you a risk that they get printed...
+<estan> also, how can i control the length of the crop marks? 3 mm is too long, since i have a 3 mm bleed. the ends of the crop marks meet exactly, which is not good.
+<estan> get printed? i want them to get printed, how else would the printer see them when he/she is to cut?
+<a-l-e> printed in the uncut area...
+<a-l-e> anyway, if you think that the way scribus renders the crop marks does not meet the needs of your print shop, please report a ticket in https://bugs.scribus.net with a description of the printer needs that justify your request...
+<estan> but that's impossible, the crop marks normally don't meet at their inner ends (though in my case they do, since the default length of them is too long for me).
+<estan> alright hm. well i need to get this done today. it's this art print i'm helping my wife with.
+ 
+* Loaded log from Sat Sep 23 21:13:46 2017
+ 
+* Now talking on #scribus
+* Topic for #scribus is: PRODUCTION: 1.4.6 (160103), DEVELOPMENT: 1.5.3 (230517), TRUNK: 1.5.4.svn | Docs: wiki.scribus.net | Bugs: bugs.scribus.net | Subversion: svn://scribus.net | No unapproved bots allowed! | The Official Manual is on amazon.com |
+* Topic for #scribus set by MrB (Tue May 23 23:22:48 2017)
+-ChanServ- [#scribus] Welcome to #scribus!
+<estan> but i'll try to work around it somehow.
+<estan> in my case, i just want a pdf with crop marks 3 mm from the edge of the exported pdf. i thought i would get that if i create a document with 3 mm bleed and check "Crop Marks".
+<a-l-e> well, what counts is what your print shop wants...
+<estan> they want 3 mm bleed and crop marks.
+<a-l-e> i cannot judge if what you want is the right thing or not, sorry.
+<a-l-e> well, i have no evidence that scribus does snot provide 3mm bleed and crop marks in a way that your printshop cannot use them.
+<a-l-e> can use them...
+<estan> hm okay. well i entered 3 mm bleed when i created the document, and the bleed margins in the document shows that, it's just that when i check "Crop Marks" and export, the crop marks are an additional 2 mm in from the bleed area, which seems arbitrary, and i can't find a way to change that.
+<a-l-e> estan, do you know what you are doing or do you think it does not look correct?
+<a-l-e> i really don't know what your skills are in print matters... all i know is that many people tend not to trust what scribus does...
+<a-l-e> ... and suppose that things are not right when they are.
+<a-l-e> normally, the scribus marks can be used by print shop.
+<a-l-e> s
+<a-l-e> as said, if you *know* that what scribus is doing is wrong, please please fill a ticket and explain it.
+<a-l-e> it will be fixed!
+<a-l-e> but if you think that it does not look right or it does not look nice... just trust scribus.
+<a-l-e> other people have used the feature and it did work.
+<estan> well it's not wrong per se, and i do know what bleed and crop marks are. i know in many cases you do want bleed and then the crop marks a bit inward from that. but in my case i'm only interested in getting the crop marks 3 mm in from the (PDF page) edge.
+<a-l-e> as said, what matters is what your print shop needs, not what you want.
+<estan> also, no matter what workaround i come up with (i can increase my page size to account for the 2 mm offset scribus seems to have hardcoded), the crop marks are too big. they are 3 mm long.
+<a-l-e> it might sound hard, but you're not the first one who argues about things scribsu is doing right.
+<estan> if i export a PDF and want the crop marks 3 mm from the edge, 3 mm long crop marks is too long since they will meet exactly, which makes me run the risk of them being printed.
+<a-l-e> estan, i really don't understand why you don't trust scribus to do the right thing.
+<estan> a-l-e: it's not about right or wrong. do you disagree that scribus has hardcoded the length of the crop marks to 3 mm? what should i do if i need to create a pdf with a 3 mm bleed area?
+<a-l-e> i don't disagree with anything, but i think that you're misunderstooding what crop marks are.
+<a-l-e> it's just about the print shop being able to correctly cut the paper.
+<a-l-e> if they can do it with what scribus provides, it's fine. if they cannot, it's a bug.
+<a-l-e> scribus and the print shop don't really care what you think about it. it might sound hard, but it's about what counts...
+<estan> i know perfectly well what crop marks are. instructions from my printer are clear: they want a 3 mm bleed, and crop marks 3 mm in from the PDF document edge.
+<estan> but because scribus gives me no way of controlling the length of the crop marks (they are 3 mm long), this is what i end up with: https://imgur.com/a/swwvf
+<estan> and that's no good, it means the crop marks meet eachother at their inner end.
+<a-l-e> if you know that this is wrong, please fill a ticket!
+<a-l-e> if you're correct it will be changed.
+<a-l-e> i cannot do magic nor tell you more.
+<a-l-e> to me those crop marks look fine. but i'm not a big expert in the topic.
+<estan> fine? if they meet like that, the printer will run the risk of getting some of the vertical mark on the printed page when doing the horizontal cut and vice versa.
+<a-l-e> estan, what do you want me to do?
+<estan> crop marks need to be separated by some distance at their inner end.
+<a-l-e> i cannot tell you more than: if you know you're right, please fill a ticket: https://bugs.scribus.net
+<estan> i will file a ticket unless one has already been filed.
+<a-l-e> thanks!
+<estan> you said you thought the crop marks looked fine, so i just tried to explain why they are not in this case, no harm meant!
+<estan> i did find https://bugs.scribus.net/view.php?id=7793 which sounds like it's about precisely this.
+<estan> but i can't find the setting they speak of. i think it's that offset setting you mentioned, but that seems to have no effect on the length of the crop mark here.
+<jghali> estan, 1in 1.5.x there is both an offset option + mark length option in prepress tab of pdf export dialog
+<jghali> 1.4.x miss the length option iirc
+```
