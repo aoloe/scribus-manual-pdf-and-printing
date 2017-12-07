@@ -364,13 +364,6 @@ joesber> Hi! I'm using Scribus-svn (1.5.4), trying to create a table of content.
 <a-l-e> anyway, if you think that the way scribus renders the crop marks does not meet the needs of your print shop, please report a ticket in https://bugs.scribus.net with a description of the printer needs that justify your request...
 <estan> but that's impossible, the crop marks normally don't meet at their inner ends (though in my case they do, since the default length of them is too long for me).
 <estan> alright hm. well i need to get this done today. it's this art print i'm helping my wife with.
- 
-* Loaded log from Sat Sep 23 21:13:46 2017
- 
-* Now talking on #scribus
-* Topic for #scribus is: PRODUCTION: 1.4.6 (160103), DEVELOPMENT: 1.5.3 (230517), TRUNK: 1.5.4.svn | Docs: wiki.scribus.net | Bugs: bugs.scribus.net | Subversion: svn://scribus.net | No unapproved bots allowed! | The Official Manual is on amazon.com |
-* Topic for #scribus set by MrB (Tue May 23 23:22:48 2017)
--ChanServ- [#scribus] Welcome to #scribus!
 <estan> but i'll try to work around it somehow.
 <estan> in my case, i just want a pdf with crop marks 3 mm from the edge of the exported pdf. i thought i would get that if i create a document with 3 mm bleed and check "Crop Marks".
 <a-l-e> well, what counts is what your print shop wants...
@@ -418,3 +411,11 @@ joesber> Hi! I'm using Scribus-svn (1.5.4), trying to create a table of content.
 <jghali> estan, 1in 1.5.x there is both an offset option + mark length option in prepress tab of pdf export dialog
 <jghali> 1.4.x miss the length option iirc
 ```
+
+## checking that the scribus pdf only contains cmyk resources
+
+- make sure that you are exporting with the "printer" target
+- if you have activated the color management, make sure that you have a profile for the printer that is for cmyk (the default one should be ok, if you have not activated it)
+- open the created pdf with scribus:
+  - make sure that the color editor only shows cmyk colors
+  - use the `extra > images" manager to check that all iamges are cmyk
