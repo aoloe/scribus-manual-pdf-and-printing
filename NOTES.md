@@ -421,3 +421,10 @@ joesber> Hi! I'm using Scribus-svn (1.5.4), trying to create a table of content.
   - use the `extra > images" manager to check that all iamges are cmyk
 
 Warning: images that contain transparences are delivered by poppler as RGB images plus the _alpha_ information and Scribus will import them as PNGs. In such cases, on Linux can use `pdfimages` (with Tiff as a target) to extract the images and check that the PDF indeed contains CMYK images.
+
+## Exporting to CMYK images
+
+[undertaker](http://www.linuxgraphic.org/forums/viewtopic.php?f=20&t=8323):
+
+En continuant mes recherches, j'ai appris qu'il existe un greffon pour GIMP qui permet de créer un TIFF avec séparation quadrichromique (qui crée 1 calque pour chacune des couleurs CMJ et N) : "Separate+". 
+Le fichier est alors très bien traité chez l'imprimeur. Pour l'envoyer, et selon les directives de l'imprimeur, il est parfois conseillé de l'inclure dans une archive .zip pour gagner un peu de place.
