@@ -38,3 +38,18 @@ gs -o test-transparencies-1.3.pdf \
 ```
 
 but it did not at making the text selectable again.
+
+### Using multiple layers
+
+You can create muliple layers:
+
+- A layer with items that have transparencies
+- A layer with the flattened items
+- A layer with the rest of the content
+
+Then you can:
+
+- Turn off the visiblitiy / printability of all layers but the one  with items with transparencies and export to PDF 1.4 the page.
+- Flatten the PDF with ghostscript.
+- Import the resulting PDF 1.3. in the layer with the flattened items.
+- Hide the layer with the items with transparencies.
