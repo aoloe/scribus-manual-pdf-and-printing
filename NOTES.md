@@ -180,6 +180,7 @@ j'essaye d'être bref pour être plus clair :-)
   - https://www.reddit.com/r/bookbinding/comments/xmesw2/my_own_imposition_software/
 - https://github.com/pdfjam/pdfjam
 - https://github.com/momijizukamori/bookbinder-js / https://momijizukamori.github.io/bookbinder-js/
+- https://jpdftweak.sourceforge.io/
 
 ## ink coverage
 
