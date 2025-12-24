@@ -433,3 +433,13 @@ Warning: images that contain transparences are delivered by poppler as RGB image
 
 En continuant mes recherches, j'ai appris qu'il existe un greffon pour GIMP qui permet de créer un TIFF avec séparation quadrichromique (qui crée 1 calque pour chacune des couleurs CMJ et N) : "Separate+". 
 Le fichier est alors très bien traité chez l'imprimeur. Pour l'envoyer, et selon les directives de l'imprimeur, il est parfois conseillé de l'inclure dans une archive .zip pour gagner un peu de place.
+
+## Print shops and transparencies
+
+The issue with professional printing is rather related to the fact that most modern PDF versions support transparencies, most print shop advertise the support for those modern PDF versions, but -- at the end -- will not handle transparencies correctly. Because they can't just print the thing as is, but need to figure out how the different "layers" of color merge into each other and prefer the client to do it before handing over the job.
+
+Since Indesign and other DTP packages offer the option to flatten the transparencies when putting the content into the PDF, the print shop have no need to change their practice and take on them that somehow risky step.
+
+Since Scribus does never flattens the transparencies (but warns you, if you try to put transparencies in a PDF version that does not support them!) and the print shop suppose that your using an Indesign that will flatten anyway, you need to make sure that gradients, half transparent items and shadows will survive the pre-press step!
+
+The risk is that they treat the items with transparency as solid one and have them cover what is behind.
